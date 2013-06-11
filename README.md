@@ -31,11 +31,13 @@ both in EmailComposer.h and EmailComposer.m files
 
 **IMPORTANT:** by now, you can attach only PDF and IMAGES (the latter will be convertend in PNG format)
 
-- Add the EmailComposer.h EmailComposer.m  files to your Plugins Folder.
-
-- Place the EmailComposer.js file somewhere in your www folder, and include it from your html.
-
-- Add to confix.xml under plugins:` <plugin name="EmailComposer" value="EmailComposer" />`
+1. Add the EmailComposer.h EmailComposer.m  files to your Plugins Folder.
+2. Place the EmailComposer.js file somewhere in your www folder, and include it from your html.
+4. Add to config.xml under plugins:` <plugin name="EmailComposer" value="EmailComposer" />` or, if using the new format, 
+` <feature name="EmailComposer">
+        <param name="ios-package" value="EmailComposer" />
+    </feature>`
+- On android, in the value attribute be sure to include the package name as well, for example `value="org.apache.cordova.EmailComposer"`
 
 Callable interface:
 
