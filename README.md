@@ -1,8 +1,14 @@
-# EmailComposer with attachments handling
+# Phonegap/Cordova EmailComposer with attachments handling Plugin#
+
+**Known Issues**
+- This plugin is not yet plugman compatible. I will work on that in a future version.
+- On android, there is code both to send an email in the background or to open the composer. The composer does not automatically return back to the app from which it was called after the email is sent.
+
 
 **NOTICE: VERSION 2.1**
 This is a plugin I modified for use for my phonegap app. I fixed a few bugs, modified the API to be consistent across both android and ios and included all the files necessary to run on both platforms.
 I fully acknowledge the original creator of this plugin, I am simply revising and renewing this plugin.
+
 
 
 **Update: VERSION 1.1**
@@ -29,7 +35,7 @@ both in EmailComposer.h and EmailComposer.m files
 
 - Place the EmailComposer.js file somewhere in your www folder, and include it from your html.
 
-- Add to Cordova.plist Plugins: key **EmailComposer** value **EmailComposer**
+- Add to confix.xml under plugins:` <plugin name="EmailComposer" value="EmailComposer" />`
 
 Callable interface:
 
@@ -59,10 +65,5 @@ or
 - 2: email sent
 - 3: send failed
 - 4: email not sent (something wrong happened)
-
-
-**Known Issues**
-- This plugin is not yet plugman compatible. I will work on that in a future version.
-- On android, there is code both to send an email in the background or to open the composer. The composer does not automatically return back to the app from which it was called after the email is sent.
 
 
